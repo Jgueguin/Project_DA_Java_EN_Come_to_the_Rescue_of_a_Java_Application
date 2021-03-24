@@ -13,12 +13,13 @@ import java.io.IOException;
 public class AnalyticsCounter {
 
 	// path and file name defined as constants
-		static String pathNameFile = "Project02Eclipse/src/molotov.AppImage";
+		static String pathNameFile = "Project02Eclipse/src/symptoms.txt";
 
 	public static void main(String args[]) throws IOException {
 
-		// ->>> Object creation with Call of ReadSymptomDataFromFile2  with file name and path as parameters
-		ReadSymptomDataFromFile file = new ReadSymptomDataFromFile(null);
+		//		ReadSymptomDataFromFile file = new ReadSymptomDataFromFile(null);
+
+		ReadSymptomDataFromFile file = new ReadSymptomDataFromFile(pathNameFile);
 
 		// ->> output of the results
 		System.out.println(file.GetSymptoms());
