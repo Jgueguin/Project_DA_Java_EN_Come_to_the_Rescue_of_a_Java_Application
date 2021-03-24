@@ -49,12 +49,12 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				}
 				reader.close();
 
-			} catch (IOException e) {
-
-				e.printStackTrace();
-
 			}
 
+			catch(NullPointerException e)
+			{
+				System.out.println("NullPointerException Caught");
+			}
 
 
 //		// output generation
