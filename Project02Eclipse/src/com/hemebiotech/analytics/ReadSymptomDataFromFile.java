@@ -2,22 +2,12 @@ package com.hemebiotech.analytics;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
-/**
- * Simple brute force implementation
- *
- *   @deprecated ISymptomReader ISymptomReader2
- *
- *    This method is no longer acceptable
- *    <p> Use {@link ReadSymptomDataFromFile2} instead.
 
- */
-@Deprecated(since = "1.1")
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
@@ -34,35 +24,59 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 */
 
 	@Override
+	public Map<String, Integer> GetSymptoms() throws IOException {
 
-	public List<String> GetSymptoms() {
+		Map<String, Integer> mapSymptoms = new TreeMap<>(); // collection to save symptoms and associated occurences
 
-		ArrayList<String> result = new ArrayList<String>();
-
-		if (filepath != null) {
 			try {
 				BufferedReader reader = new BufferedReader(new FileReader(filepath));
 				String line = reader.readLine();
 
 				while (line != null) {
-					result.add(line);
+
+					if (mapSymptoms.containsKey(line)) {
+
+						int nbrePresent = mapSymptoms.getOrDefault(line, 0);
+						mapSymptoms.replace(line, nbrePresent + 1);
+
+					} else {
+
+						mapSymptoms.put(line, 1);
+
+					}
+
 					line = reader.readLine();
 				}
 				reader.close();
 
-
 			} catch (IOException e) {
+
 				e.printStackTrace();
+
 			}
-		}
 
-		return result;
-	}
 
-	@Override
-	public String toString() {
-		return "ReadSymptomDataFromFile {" +
-				"filepath='" + filepath + '\'' +
-				'}';
+
+//		// output generation
+//		FileWriter writer = new FileWriter("result.out");
+//
+//		//write of the symptom name and associated occurence in output file
+//		mapSymptoms.forEach(name -> {
+//
+//			try {
+//				writer.write(name + ":" + mapSymptoms.get(name) + "\n");
+//			}
+//
+//			catch (IOException e) {
+//
+//				e.printStackTrace();
+//			}
+//		});
+
+//		//closure of the output file
+//		writer.flush();
+//		writer.close();
+
+		return mapSymptoms;
 	}
 }
