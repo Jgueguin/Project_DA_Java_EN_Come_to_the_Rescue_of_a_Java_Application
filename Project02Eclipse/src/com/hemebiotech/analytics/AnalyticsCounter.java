@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics;
 
-
 import java.io.IOException;
 
 /**
@@ -18,10 +17,12 @@ public class AnalyticsCounter {
 	public static void main(String args[]) throws IOException {
 
 		//		ReadSymptomDataFromFile file = new ReadSymptomDataFromFile(null);
-
 		ReadSymptomDataFromFile file = new ReadSymptomDataFromFile(pathNameFile);
 
-		// ->> output of the results
-		System.out.println(file.GetSymptoms());
+		// ->> print results in 'results.out' file and on console
+		PrintSymptomDataToFile output = new PrintSymptomDataToFile(file.GetSymptoms());
+		output.printFile();
+
+
 	}
 }

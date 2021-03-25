@@ -2,7 +2,6 @@ package com.hemebiotech.analytics;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
@@ -55,27 +54,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 			{
 				System.out.println("NullPointerException Caught");
 			}
-
-
-//		// output generation
-//		FileWriter writer = new FileWriter("result.out");
-//
-//		//write of the symptom name and associated occurence in output file
-//		mapSymptoms.forEach(name -> {
-//
-//			try {
-//				writer.write(name + ":" + mapSymptoms.get(name) + "\n");
-//			}
-//
-//			catch (IOException e) {
-//
-//				e.printStackTrace();
-//			}
-//		});
-
-//		//closure of the output file
-//		writer.flush();
-//		writer.close();
 
 		return mapSymptoms;
 	}
