@@ -41,16 +41,8 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
             while (line != null) {
 
-                if (mapSymptoms.containsKey(line)) {
-
-                    int nbrePresent = mapSymptoms.getOrDefault(line, 0);
-                    mapSymptoms.replace(line, nbrePresent + 1);
-
-                } else {
-
-                    mapSymptoms.put(line, 1);
-
-                }
+               mapSymptoms.putIfAbsent(line,0);
+               mapSymptoms.put(line,mapSymptoms.get(line)+1);
 
                 line = reader.readLine();
             }
