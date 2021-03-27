@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Read Symptom From Data File implementation
+ *
+ */
 
 public class ReadSymptomDataFromFile implements ISymptomReader {
 

@@ -4,6 +4,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * Print Symptom and its occurrences into file and on console
+ *
+ */
+
 public class PrintSymptomDataToFile implements IReaderMap {
 
     private Map readMap;
