@@ -1,1 +1,1 @@
-# Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application
+# [DA JAVA P2] Assistance program for the analysis of symptoms and associated occurrences 
