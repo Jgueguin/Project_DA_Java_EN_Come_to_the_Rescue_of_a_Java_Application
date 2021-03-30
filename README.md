@@ -8,7 +8,4 @@
    
 -> fournit un fichier "result.out" avec un tri alphabétique des symptômes ainsi que du nombre d'occurences associées
 
--> Le programme se lance avec un Run depuis Intellij ou Eclipse avec les 
-le fichier 
-
 
