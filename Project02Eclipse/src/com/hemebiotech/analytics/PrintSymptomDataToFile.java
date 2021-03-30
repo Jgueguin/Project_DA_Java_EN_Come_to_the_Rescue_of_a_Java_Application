@@ -27,13 +27,12 @@ public class PrintSymptomDataToFile implements IReaderMap {
     @Override
     public void printFile() throws IOException {
 
-
         // output generation
         FileWriter writer = new FileWriter("result.out");
 
-        //write of the symptom name and associated occurence in output file and on console
-        System.out.println("Symptoms   :  occurences");
-        writer.write("Symptoms   :  occurences \n");
+        //write of the symptom name and associated occurrence in output file and on console
+        System.out.println("Symptoms   :  occurrences");
+        writer.write("Symptoms   :  occurrences \n");
 
         readMap.forEach((name, Integer) -> {
 
