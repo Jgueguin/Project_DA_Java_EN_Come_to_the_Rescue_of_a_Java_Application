@@ -1,3 +1,4 @@
+covid
 fever
 dialated pupils
 dry mouth
@@ -43,6 +44,7 @@ headache
 blindness
 dry mouth
 tremor
+covid
 stomach pain
 headache
 anxiety
@@ -97,4 +99,5 @@ low blood pressure
 anxiety
 anxiety
 cough
+covid
 blurred vision

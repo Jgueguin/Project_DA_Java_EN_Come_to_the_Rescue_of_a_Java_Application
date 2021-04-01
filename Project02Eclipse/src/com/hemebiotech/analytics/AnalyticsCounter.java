@@ -20,7 +20,7 @@ public class AnalyticsCounter {
 		ReadSymptomDataFromFile file = new ReadSymptomDataFromFile(pathNameFile);
 
 		// ->> print results in 'results.out' file and on console
-		PrintSymptomDataToFile output = new PrintSymptomDataToFile(file.GetSymptoms());
+		PrintSymptomDataToFile output = new PrintSymptomDataToFile(file.getSymptoms());
 		output.printFile();
 
 

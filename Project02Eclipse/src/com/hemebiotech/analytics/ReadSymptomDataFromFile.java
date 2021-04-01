@@ -27,7 +27,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 */
 
 	@Override
-	public Map<String, Integer> GetSymptoms() throws IOException {
+	public Map<String, Integer> getSymptoms() throws IOException {
 
 		Map<String, Integer> mapSymptoms = new TreeMap<>(); // collection to save symptoms and associated occurences
 
