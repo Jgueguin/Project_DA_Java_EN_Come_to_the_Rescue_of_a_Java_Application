@@ -26,7 +26,7 @@ public class AnalyticsCounter {
     public void processData() throws IOException {
 
         ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile(pathNameFile);
-        Map<String, Integer> mapSymptoms = reader.GetSymptoms();
+        Map<String, Integer> mapSymptoms = reader.getSymptoms();
         this.outputData(mapSymptoms);
 
     }
